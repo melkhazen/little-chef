@@ -2,9 +2,22 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>food list</title>
 </head>
 <body>
+<div>
+<table>
+    <tr>
+        <td>
 
+        </td>
+    </tr>
+</table>
+    <ul th:each="item : ${foods}">
+        <li th:each="vegetable : ${item.value}">
+            <p th:text="${vegetable}"></p>
+        </li>
+    </ul>
+</div>
 </body>
 </html>
