@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+
+<head th:fragment="head">
+
+  <title>Little Chef</title>
+</head>
+<body>
+
+<div th:fragment="table" class="container body-content">
+  <table class="little-chef">
+    <tr th:each="categoryKey : ${foodsKey}">
+    <th th:text="${categoryKey.key}">
+    </th>
+    <tr th:each="categoryValue : ${foodsValue}">
+      <td th:each="item : ${categoryValue.value}">
+        <ul >
+          <li th:text="${item}"></li>
+        </ul>
+      </td>
+    </tr>
+
+
+    </tr>
+  </table >
+</div>
+
+<div th:fragment="categoryKey">
+  <form action="">
+    <ul  th:each="categoryKey : ${foodsKey}">
+      <li >
+        <input th:text="${categoryKey.key}" type="checkbox" name="categoryKey" value="categoryKey"><br>
+      </li>
+
+    </ul>
+  </form>
+</div>
+
+
+</body>
+</html>

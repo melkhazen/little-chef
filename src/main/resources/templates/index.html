@@ -2,22 +2,11 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>food list</title>
+    <title>Little chef</title>
 </head>
 <body>
-<div>
-<table>
-    <tr>
-        <td>
+<h1>Select food you have in your fridge:</h1>
+<div th:replace="fragments :: categoryKey"></div>
 
-        </td>
-    </tr>
-</table>
-    <ul th:each="item : ${foods}">
-        <li th:each="vegetable : ${item.value}">
-            <p th:text="${vegetable}"></p>
-        </li>
-    </ul>
-</div>
 </body>
 </html>
